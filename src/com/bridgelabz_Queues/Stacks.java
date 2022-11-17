@@ -22,6 +22,25 @@ public class Stacks {
         head = newNode;
     }
 
+    // deleting the last element
+    public void Pop(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        if(head.next == null){
+            head= null;
+            return;
+        }
+        Node secoundLast = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secoundLast = secoundLast.next;
+        }
+        secoundLast.next= null;
+    }
+
     //Printing the code
     void Print() {
         if (head == null) {                                  // Checking f head is empty or not
@@ -40,6 +59,7 @@ public class Stacks {
         ob2.Push("70");
         ob2.Push("30");
         ob2.Push("56");
+        ob2.Pop();
         ob2.Print();
     }
 }

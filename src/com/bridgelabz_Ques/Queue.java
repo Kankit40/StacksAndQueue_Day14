@@ -24,6 +24,15 @@ public class Queue {
         head = newNode;
     }
 
+    // Deleting the first element
+    public void deQueue(){
+        if(head == null){
+            System.out.println(" the list is empty");
+            return;
+        }
+        head = head.next;
+    }
+
     //Printing the code
     void Print() {
         if (head == null) {                                  // Checking f head is empty or not
@@ -42,6 +51,7 @@ public class Queue {
         ob2.enQueu("70");
         ob2.enQueu("30");
         ob2.enQueu("56");
+        ob2.deQueue();
         ob2.Print();
     }
 }
