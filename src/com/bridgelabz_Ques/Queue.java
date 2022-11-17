@@ -40,8 +40,8 @@ public class Queue {
     public static void main(String[] args) {
         Queue ob2 = new Queue();
         ob2.enQueu("70");
-        ob2.enQueu("56");
         ob2.enQueu("30");
+        ob2.enQueu("56");
         ob2.Print();
     }
 }
