@@ -1,4 +1,4 @@
-package com.bridgelabz_Queues;
+package com.bridgelabz_Stacks;
 
 public class Stacks {
     Node head;
@@ -22,23 +22,13 @@ public class Stacks {
         head = newNode;
     }
 
-    // deleting the last element
+    // deleting the first element
     public void Pop(){
         if(head == null){
             System.out.println(" the list is empty");
             return;
         }
-        if(head.next == null){
-            head= null;
-            return;
-        }
-        Node secoundLast = head;
-        Node lastNode = head.next;
-        while(lastNode.next != null){
-            lastNode = lastNode.next;
-            secoundLast = secoundLast.next;
-        }
-        secoundLast.next= null;
+        head = head.next;
     }
 
     //Printing the code

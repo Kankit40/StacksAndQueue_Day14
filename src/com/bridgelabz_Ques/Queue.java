@@ -1,7 +1,5 @@
 package com.bridgelabz_Ques;
 
-import com.bridgelabz_Queues.Stacks;
-
 public class Queue {
     Node head;
     public class Node {
@@ -24,13 +22,23 @@ public class Queue {
         head = newNode;
     }
 
-    // Deleting the first element
+    // Deleting the last element
     public void deQueue(){
         if(head == null){
             System.out.println(" the list is empty");
             return;
         }
-        head = head.next;
+        if(head.next == null){
+            head= null;
+            return;
+        }
+        Node secoundLast = head;
+        Node lastNode = head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secoundLast = secoundLast.next;
+        }
+        secoundLast.next= null;
     }
 
     //Printing the code
